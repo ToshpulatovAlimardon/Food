@@ -1,0 +1,102 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #B9C543;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+.food {
+    margin-top: 100px;
+    margin-bottom: 80px;
+}
+.food-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    box-shadow: 0 0 10px 5px #8c981c;
+    
+}
+    .food-content .food-item {
+        padding: 15px;
+        width: 30%;
+        text-align: center;
+    }
+    .food-item .food-img {
+        width: 100%;
+        height: 185px;
+    }
+        .food-item .food-img img {
+            width: 100%;
+            height: 100%;
+        }
+        .food-item .food-desc {
+            padding: 40px 30px;
+        }
+            .food-desc h2 {
+                color: #B9C543;
+                font-size: 32px;
+                margin-bottom: 10px;
+            }
+
+@media screen and (max-width: 1150px) {
+    .food {
+        margin-bottom: 50px;
+        margin-top: 50px;
+    }
+    .food-content {
+        flex-wrap: wrap;
+    }
+    .food-content .food-item {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .food-content .food-item:nth-child(2n-1) {
+        flex-direction: row-reverse;
+    }
+        .food-item .food-img {
+            width: 50%;
+            height: 250px;
+        }
+            .food-item .food-img img {
+                width: 100%;
+                height: 100%;
+            }
+        .food-item .food-desc {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+}
+
+@media screen and (max-width: 650px) {
+    .food {
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+    .food-content .food-item {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        width: 100%;
+    }
+    .food-content .food-item:nth-child(2n-1) {
+        flex-direction: column;
+    }
+        .food-item .food-img {
+            width: 100%;
+        }
+        .food-item .food-desc {
+            width: 100%;
+        }
+}
